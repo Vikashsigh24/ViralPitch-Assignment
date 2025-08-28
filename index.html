@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Column 1 -->
+    <div class="col-1">
+      <div class="side-nav">
+        <div class="header">
+          <h2>WHIZARD</h2>
+          <p>WhatsApp Solution</p>
+        </div>
+        <hr>
+
+        <div class="icon-text">
+          <i class="bi bi-clipboard2-pulse"></i>
+          <p>Dashboard</p>
+        </div>
+
+        <div class="icon-text">
+          <i class="bi bi-chat"></i>
+          <p>Chats</p>
+        </div>
+
+        <div class="icon-text">
+          <i class="bi bi-person-lines-fill"></i>
+          <p>Contact List</p>
+        </div>
+
+        <div class="icon-text">
+          <i class="bi bi-envelope-paper"></i>
+          <p>Template</p>
+        </div>
+
+        <div class="icon-text">
+          <i class="bi bi-person"></i>
+          <p>Manage Users</p>
+        </div>
+
+        <div class="icon-text">
+          <i class="bi bi-file-earmark-bar-graph"></i>
+          <p>Reports</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="col-2">
+      <div class="header">
+        <h2>Add Template</h2>
+        <hr>
+      </div>
+
+      <label for="template-name">Template Name</label>
+      <input type="text" id="template-name" name="template-name" placeholder="Give new template name">
+      <label for="template-category">Category</label>
+      <select id="template-category" name="template-category">
+        <option value="select-category" disabled selected>Choose category</option>
+        <option value="utility">Utility</option>
+        <option value="marketing">Marketing</option>
+        <option value="authentication">Authentication</option>
+      </select>
+      <label for="language">Language</label>
+      <input type="text" id="language" name="language" placeholder="Select language(s)">
+
+      <div class="selected-language">
+        <p>English</p>
+        <i class="bi bi-x-lg remove-icon"></i>
+      </div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="col-3">
+      <div class="header">
+        <h2>Setup Template</h2>
+        <hr>
+      </div>
+
+      <h5>Header<span>(Optional)</span></h5>
+      <select name="text-media" id="text-media">
+        <option value="select-header" disabled selected>None</option>
+        <option value="text">Text</option>
+        <option value="media">Media</option>
+      </select>
+      <p>Add a title or choose which type of media you'll use for header.</p>
+
+      <select name="media-type" id="media-type">
+        <option value="select-media" selected>Image</option>
+        <option value="video">Video</option>
+        <option value="document">Document</option>
+        <option value="location">Location</option>
+      </select>
+
+      <input type="text" id="header-text" name="header-text" placeholder="Add header text" value="Sample_pic.jpg">
+
+      <h5>Body</h5>
+      <p>Enter the text for your message in the language that you've selected.</p>
+      <textarea id="body-text" name="body-text" placeholder="Add body text" style="height:200px"></textarea>
+
+      <h5>Footer</h5>
+      <p>Add a short line of text to button your message template. if you add the marketing opt-out option the
+        associated footer will be shown here by default.</p>
+      <input type="text" id="footer-text" name="footer-text" placeholder="Enter text in English">
+
+
+      <h5>Buttons<span>(Optional)</span></h5>
+      <p>Create button that let customers respond to your message or take action.</p>
+
+      <select name="button" id="button">
+        <option value="call-to-action" disabled>Call to action</option>
+        <option value="Visit-website">Visit Website</option>
+        <option value="Call-Phone">Phone Number</option>
+        <hr>
+        <option value="quick-reply" disabled>Quick Reply</option>
+        <option value="quick-reply-1">Quick Reply Button</option>
+      </select>
+      <p>If you will add more than 1 button, they will appear in a list. </p>
+
+      <h5>Call to action</h5>
+      <div class="cta">
+
+
+
+      </div>
+
+      <h5>Quick Reply</h5>
+      <label for="quick-reply-text">Button Text</label>
+      <input type="text" id="quick-reply-text" name="quick-reply-text" placeholder="Edit button label here: ">
+
+
+    </div>
+
+    <!-- Column 4 -->
+    <div class="col-4">
+      <div class="header">
+        <h2>Template Review</h2>
+        <hr>
+      </div>
+
+      <p id="time" class="text-start"></p>
+
+      <div class="button_container">
+        <img src="" alt="" width="300" height="100">
+        <p>Dear User! Please read this information</p>
+        <p class="subscribe_now" style="  color: #b8b8b8;">Subscribe Now</p>
+        <hr>
+        <button type="button"><i class="bi bi-box-arrow-right"></i>Visit Now</button>
+        <hr>
+        <button type="button"><i class="bi bi-telephone"></i>Call Now</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+<script>
+
+  let time = document.getElementById("time").innerHTML = new Date().toLocaleTimeString([],
+  {hour : '2-digit', minute : '2-digit', hour12 : true});
+
+
+document.querySelector('.remove-icon').addEventListener('click', function(){
+  this.parentElement.style.display = 'none';
+});
+
+</script>
+
+
+</html>
