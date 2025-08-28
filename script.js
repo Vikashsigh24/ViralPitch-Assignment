@@ -5,3 +5,5 @@ let time = document.getElementById("time").innerHTML = new Date().toLocaleTimeSt
 document.querySelector('.remove-icon').addEventListener('click', function(){
   this.parentElement.style.display = 'none';
 });
+
+let closeBtn = document.querySelector('.close-btn');
